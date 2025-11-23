@@ -1,0 +1,437 @@
+{
+  "class_names": [
+    "African Violet (Saintpaulia ionantha)",
+    "Aloe Vera",
+    "Anthurium (Anthurium andraeanum)",
+    "Areca Palm (Dypsis lutescens)",
+    "Asparagus Fern (Asparagus setaceus)",
+    "Begonia (Begonia spp.)",
+    "Bird of Paradise (Strelitzia reginae)",
+    "Birds Nest Fern (Asplenium nidus)",
+    "Boston Fern (Nephrolepis exaltata)",
+    "Calathea",
+    "Cast Iron Plant (Aspidistra elatior)",
+    "Chinese Money Plant (Pilea peperomioides)",
+    "Chinese evergreen (Aglaonema)",
+    "Christmas Cactus (Schlumbergera bridgesii)",
+    "Chrysanthemum",
+    "Ctenanthe",
+    "Daffodils (Narcissus spp.)",
+    "Dracaena",
+    "Dumb Cane (Dieffenbachia spp.)",
+    "Elephant Ear (Alocasia spp.)",
+    "English Ivy (Hedera helix)",
+    "Hyacinth (Hyacinthus orientalis)",
+    "Iron Cross begonia (Begonia masoniana)",
+    "Jade plant (Crassula ovata)",
+    "Kalanchoe",
+    "Lilium (Hemerocallis)",
+    "Lily of the valley (Convallaria majalis)",
+    "Money Tree (Pachira aquatica)",
+    "Monstera Deliciosa (Monstera deliciosa)",
+    "Orchid",
+    "Parlor Palm (Chamaedorea elegans)",
+    "Peace lily",
+    "Poinsettia (Euphorbia pulcherrima)",
+    "Polka Dot Plant (Hypoestes phyllostachya)",
+    "Ponytail Palm (Beaucarnea recurvata)",
+    "Pothos (Ivy arum)",
+    "Prayer Plant (Maranta leuconeura)",
+    "Rattlesnake Plant (Calathea lancifolia)",
+    "Rubber Plant (Ficus elastica)",
+    "Sago Palm (Cycas revoluta)",
+    "Schefflera",
+    "Snake plant (Sanseviera)",
+    "Tradescantia",
+    "Tulip",
+    "Venus Flytrap",
+    "Yucca",
+    "ZZ Plant (Zamioculcas zamiifolia)"
+  ],
+  "classes": {
+    "African Violet (Saintpaulia ionantha)": {
+      "index": 0,
+      "total": 337,
+      "train": 236,
+      "val": 50,
+      "test": 51,
+      "weight": 0.9322935342788696
+    },
+    "Aloe Vera": {
+      "index": 1,
+      "total": 251,
+      "train": 176,
+      "val": 38,
+      "test": 37,
+      "weight": 1.2501208782196045
+    },
+    "Anthurium (Anthurium andraeanum)": {
+      "index": 2,
+      "total": 454,
+      "train": 318,
+      "val": 68,
+      "test": 68,
+      "weight": 0.6918908357620239
+    },
+    "Areca Palm (Dypsis lutescens)": {
+      "index": 3,
+      "total": 189,
+      "train": 132,
+      "val": 29,
+      "test": 28,
+      "weight": 1.6668277978897095
+    },
+    "Asparagus Fern (Asparagus setaceus)": {
+      "index": 4,
+      "total": 169,
+      "train": 118,
+      "val": 26,
+      "test": 25,
+      "weight": 1.8645870685577393
+    },
+    "Begonia (Begonia spp.)": {
+      "index": 5,
+      "total": 233,
+      "train": 163,
+      "val": 35,
+      "test": 35,
+      "weight": 1.3498238325119019
+    },
+    "Bird of Paradise (Strelitzia reginae)": {
+      "index": 6,
+      "total": 180,
+      "train": 126,
+      "val": 27,
+      "test": 27,
+      "weight": 1.7462005615234375
+    },
+    "Birds Nest Fern (Asplenium nidus)": {
+      "index": 7,
+      "total": 290,
+      "train": 203,
+      "val": 43,
+      "test": 44,
+      "weight": 1.0838485956192017
+    },
+    "Boston Fern (Nephrolepis exaltata)": {
+      "index": 8,
+      "total": 306,
+      "train": 214,
+      "val": 46,
+      "test": 46,
+      "weight": 1.0281368494033813
+    },
+    "Calathea": {
+      "index": 9,
+      "total": 330,
+      "train": 231,
+      "val": 49,
+      "test": 50,
+      "weight": 0.9524730443954468
+    },
+    "Cast Iron Plant (Aspidistra elatior)": {
+      "index": 10,
+      "total": 266,
+      "train": 186,
+      "val": 40,
+      "test": 40,
+      "weight": 1.1829100847244263
+    },
+    "Chinese Money Plant (Pilea peperomioides)": {
+      "index": 11,
+      "total": 382,
+      "train": 267,
+      "val": 57,
+      "test": 58,
+      "weight": 0.824049711227417
+    },
+    "Chinese evergreen (Aglaonema)": {
+      "index": 12,
+      "total": 514,
+      "train": 360,
+      "val": 77,
+      "test": 77,
+      "weight": 0.61117023229599
+    },
+    "Christmas Cactus (Schlumbergera bridgesii)": {
+      "index": 13,
+      "total": 312,
+      "train": 218,
+      "val": 47,
+      "test": 47,
+      "weight": 1.0092718601226807
+    },
+    "Chrysanthemum": {
+      "index": 14,
+      "total": 209,
+      "train": 146,
+      "val": 32,
+      "test": 31,
+      "weight": 1.5069950819015503
+    },
+    "Ctenanthe": {
+      "index": 15,
+      "total": 344,
+      "train": 241,
+      "val": 51,
+      "test": 52,
+      "weight": 0.9129513502120972
+    },
+    "Daffodils (Narcissus spp.)": {
+      "index": 16,
+      "total": 421,
+      "train": 295,
+      "val": 63,
+      "test": 63,
+      "weight": 0.7458348274230957
+    },
+    "Dracaena": {
+      "index": 17,
+      "total": 261,
+      "train": 183,
+      "val": 39,
+      "test": 39,
+      "weight": 1.202302098274231
+    },
+    "Dumb Cane (Dieffenbachia spp.)": {
+      "index": 18,
+      "total": 541,
+      "train": 379,
+      "val": 81,
+      "test": 81,
+      "weight": 0.5805310606956482
+    },
+    "Elephant Ear (Alocasia spp.)": {
+      "index": 19,
+      "total": 332,
+      "train": 232,
+      "val": 50,
+      "test": 50,
+      "weight": 0.9483675956726074
+    },
+    "English Ivy (Hedera helix)": {
+      "index": 20,
+      "total": 240,
+      "train": 168,
+      "val": 36,
+      "test": 36,
+      "weight": 1.3096504211425781
+    },
+    "Hyacinth (Hyacinthus orientalis)": {
+      "index": 21,
+      "total": 318,
+      "train": 223,
+      "val": 47,
+      "test": 48,
+      "weight": 0.9866424798965454
+    },
+    "Iron Cross begonia (Begonia masoniana)": {
+      "index": 22,
+      "total": 266,
+      "train": 186,
+      "val": 40,
+      "test": 40,
+      "weight": 1.1829100847244263
+    },
+    "Jade plant (Crassula ovata)": {
+      "index": 23,
+      "total": 353,
+      "train": 247,
+      "val": 53,
+      "test": 53,
+      "weight": 0.8907744288444519
+    },
+    "Kalanchoe": {
+      "index": 24,
+      "total": 130,
+      "train": 91,
+      "val": 20,
+      "test": 19,
+      "weight": 2.417816162109375
+    },
+    "Lilium (Hemerocallis)": {
+      "index": 25,
+      "total": 479,
+      "train": 335,
+      "val": 72,
+      "test": 72,
+      "weight": 0.656779944896698
+    },
+    "Lily of the valley (Convallaria majalis)": {
+      "index": 26,
+      "total": 412,
+      "train": 288,
+      "val": 62,
+      "test": 62,
+      "weight": 0.7639627456665039
+    },
+    "Money Tree (Pachira aquatica)": {
+      "index": 27,
+      "total": 359,
+      "train": 251,
+      "val": 54,
+      "test": 54,
+      "weight": 0.8765788078308105
+    },
+    "Monstera Deliciosa (Monstera deliciosa)": {
+      "index": 28,
+      "total": 547,
+      "train": 383,
+      "val": 82,
+      "test": 82,
+      "weight": 0.5744680762290955
+    },
+    "Orchid": {
+      "index": 29,
+      "total": 234,
+      "train": 164,
+      "val": 35,
+      "test": 35,
+      "weight": 1.3415931463241577
+    },
+    "Parlor Palm (Chamaedorea elegans)": {
+      "index": 30,
+      "total": 329,
+      "train": 230,
+      "val": 49,
+      "test": 50,
+      "weight": 0.9566142559051514
+    },
+    "Peace lily": {
+      "index": 31,
+      "total": 385,
+      "train": 270,
+      "val": 57,
+      "test": 58,
+      "weight": 0.8148936033248901
+    },
+    "Poinsettia (Euphorbia pulcherrima)": {
+      "index": 32,
+      "total": 306,
+      "train": 214,
+      "val": 46,
+      "test": 46,
+      "weight": 1.0281368494033813
+    },
+    "Polka Dot Plant (Hypoestes phyllostachya)": {
+      "index": 33,
+      "total": 341,
+      "train": 239,
+      "val": 51,
+      "test": 51,
+      "weight": 0.9205911159515381
+    },
+    "Ponytail Palm (Beaucarnea recurvata)": {
+      "index": 34,
+      "total": 197,
+      "train": 138,
+      "val": 30,
+      "test": 29,
+      "weight": 1.5943571329116821
+    },
+    "Pothos (Ivy arum)": {
+      "index": 35,
+      "total": 243,
+      "train": 170,
+      "val": 37,
+      "test": 36,
+      "weight": 1.2942428588867188
+    },
+    "Prayer Plant (Maranta leuconeura)": {
+      "index": 36,
+      "total": 400,
+      "train": 280,
+      "val": 60,
+      "test": 60,
+      "weight": 0.7857902646064758
+    },
+    "Rattlesnake Plant (Calathea lancifolia)": {
+      "index": 37,
+      "total": 315,
+      "train": 221,
+      "val": 47,
+      "test": 47,
+      "weight": 0.9955713748931885
+    },
+    "Rubber Plant (Ficus elastica)": {
+      "index": 38,
+      "total": 291,
+      "train": 204,
+      "val": 44,
+      "test": 43,
+      "weight": 1.0785356760025024
+    },
+    "Sago Palm (Cycas revoluta)": {
+      "index": 39,
+      "total": 202,
+      "train": 141,
+      "val": 31,
+      "test": 30,
+      "weight": 1.5604345798492432
+    },
+    "Schefflera": {
+      "index": 40,
+      "total": 326,
+      "train": 228,
+      "val": 49,
+      "test": 49,
+      "weight": 0.9650055766105652
+    },
+    "Snake plant (Sanseviera)": {
+      "index": 41,
+      "total": 396,
+      "train": 277,
+      "val": 59,
+      "test": 60,
+      "weight": 0.7943006157875061
+    },
+    "Tradescantia": {
+      "index": 42,
+      "total": 341,
+      "train": 239,
+      "val": 51,
+      "test": 51,
+      "weight": 0.9205911159515381
+    },
+    "Tulip": {
+      "index": 43,
+      "total": 340,
+      "train": 238,
+      "val": 51,
+      "test": 51,
+      "weight": 0.9244591593742371
+    },
+    "Venus Flytrap": {
+      "index": 44,
+      "total": 199,
+      "train": 139,
+      "val": 30,
+      "test": 30,
+      "weight": 1.5828869342803955
+    },
+    "Yucca": {
+      "index": 45,
+      "total": 66,
+      "train": 46,
+      "val": 10,
+      "test": 10,
+      "weight": 4.783071041107178
+    },
+    "ZZ Plant (Zamioculcas zamiifolia)": {
+      "index": 46,
+      "total": 438,
+      "train": 307,
+      "val": 65,
+      "test": 66,
+      "weight": 0.7166816592216492
+    }
+  },
+  "total_samples": 14774,
+  "total_train_samples": 10341,
+  "total_val_samples": 2216,
+  "total_test_samples": 2217,
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15000000000000005,
+  "seed": 42
+}
