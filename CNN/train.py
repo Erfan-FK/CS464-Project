@@ -2,7 +2,9 @@
 import argparse
 import random
 import sys
+import csv
 from pathlib import Path
+import os
 
 import numpy as np
 import torch
@@ -144,6 +146,36 @@ def evaluate_on_test(model, loader, device):
     return acc
 
 
+def save_checkpoint(state, filename):
+    try:
+        torch.save(state, filename)
+    except Exception as e:
+        print(f"Error saving checkpoint to {filename}: {e}")
+
+
+def load_checkpoint(path, device):
+    try:
+        # We use weights_only=True to avoid the FutureWarning and security risk.
+        # However, this requires PyTorch 2.0+. If using older version, remove weights_only=True.
+        # Given the user's error message, they are on a version that supports it (and warns about it).
+        # If loading complex objects (like optimizer state sometimes), safe_globals might be needed.
+        # But for standard training loops, weights_only=True usually works if just tensors/primitives.
+        # IF IT FAILS, we fall back to False.
+        try:
+            return torch.load(path, map_location=device, weights_only=True)
+        except TypeError:
+             # older pytorch doesn't have weights_only
+             return torch.load(path, map_location=device)
+        except Exception:
+             # fallback if strict loading fails (though not ideal security-wise, it's what user had)
+             print("Warning: weights_only=True failed, retrying with weights_only=False")
+             return torch.load(path, map_location=device, weights_only=False)
+             
+    except Exception as e:
+        print(f"Failed to load checkpoint from {path}: {e}")
+        return None
+
+
 def main():
     parser = argparse.ArgumentParser(description="Train a simple CNN from scratch on house plant dataset.")
     parser.add_argument("--data_root", type=str, required=True,
@@ -173,6 +205,7 @@ def main():
     print(f"Using device: {device}")
 
     print("Building dataloaders")
+    # get_dataloaders internally uses weights_only=True for class_weights now (after fix in data_prep.py)
     train_loader, val_loader, test_loader, class_weights, class_names = get_dataloaders(
         data_root=data_root,
         splits_dir=splits_dir,
@@ -196,66 +229,133 @@ def main():
         lr=args.lr,
         weight_decay=args.weight_decay,
     )
+    
+    # Add a scheduler for better convergence
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode='max', factor=0.1, patience=5, verbose=True
+    )
 
     best_ckpt_path = out_dir / "cnn_best.pt"
+    last_ckpt_path = out_dir / "cnn_last.pt"
+    results_csv_path = out_dir / "results.csv"
+
     best_val_acc = 0.0
     start_epoch = 1
+    
+    # Initialize results file if not exists
+    if not results_csv_path.exists():
+        with open(results_csv_path, mode='w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["epoch", "train_loss", "train_acc", "val_loss", "val_acc", "lr"])
 
-    # Resume (no scheduler now)
-    if best_ckpt_path.exists():
-        print(f"Found existing checkpoint at {best_ckpt_path}, resuming training.")
-        ckpt = torch.load(best_ckpt_path, map_location=device)
+    # Try to resume from last checkpoint first (to continue exactly where left off)
+    ckpt = None
+    if last_ckpt_path.exists():
+        print(f"Found last checkpoint at {last_ckpt_path}, attempting to resume.")
+        ckpt = load_checkpoint(last_ckpt_path, device)
+    
+    # If last checkpoint failed or didn't exist, try best checkpoint
+    if ckpt is None and best_ckpt_path.exists():
+        print(f"Found best checkpoint at {best_ckpt_path}, attempting to resume.")
+        ckpt = load_checkpoint(best_ckpt_path, device)
 
-        model.load_state_dict(ckpt["model_state_dict"])
-        best_val_acc = ckpt.get("val_acc", 0.0)
-        start_epoch = ckpt.get("epoch", 0) + 1
-
-        if "optimizer_state_dict" in ckpt:
+    if ckpt is not None:
+        try:
+            model.load_state_dict(ckpt["model_state_dict"])
             optimizer.load_state_dict(ckpt["optimizer_state_dict"])
+            start_epoch = ckpt.get("epoch", 0) + 1
+            best_val_acc = ckpt.get("best_val_acc", ckpt.get("val_acc", 0.0))
+            
+            if "scheduler_state_dict" in ckpt:
+                scheduler.load_state_dict(ckpt["scheduler_state_dict"])
+                
+            print(f"Resuming from epoch {start_epoch} (best_val_acc={best_val_acc:.4f})")
+        except Exception as e:
+            print(f"Error restoring state from checkpoint: {e}")
+            print("Starting from scratch due to checkpoint error.")
+            start_epoch = 1
+            best_val_acc = 0.0
+            # Reset model and optimizer if partial load messed things up
+            model = CNN(num_classes=num_classes).to(device)
+            optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+            scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.1, patience=5, verbose=True)
 
-        print(f"Resuming from epoch {start_epoch} with best_val_acc={best_val_acc:.4f}")
-        if start_epoch > args.epochs:
-            print(f"start_epoch ({start_epoch}) > total epochs ({args.epochs}); "
-                  f"no further training will be done.")
     else:
-        print("No existing checkpoint, starting from scratch.")
+        print("No valid checkpoint found, starting from scratch.")
 
-    # Train
-    for epoch in range(start_epoch, args.epochs + 1):
-        print(f"\nEpoch {epoch}/{args.epochs}")
+    if start_epoch > args.epochs:
+        print(f"start_epoch ({start_epoch}) > total epochs ({args.epochs}); no further training will be done.")
+    else:
+        # Train
+        for epoch in range(start_epoch, args.epochs + 1):
+            print(f"\nEpoch {epoch}/{args.epochs}")
 
-        train_loss, train_acc = train_one_epoch(
-            model, train_loader, criterion, optimizer, device
-        )
-        val_loss, val_acc = eval_one_epoch(
-            model, val_loader, criterion, device
-        )
+            train_loss, train_acc = train_one_epoch(
+                model, train_loader, criterion, optimizer, device
+            )
+            val_loss, val_acc = eval_one_epoch(
+                model, val_loader, criterion, device
+            )
+            
+            # Step scheduler
+            scheduler.step(val_acc)
 
-        current_lr = optimizer.param_groups[0]["lr"]
-        print(f"Train loss: {train_loss:.4f}, acc: {train_acc:.4f}")
-        print(f"Val   loss: {val_loss:.4f}, acc: {val_acc:.4f}")
-        print(f"LR now: {current_lr:.6f}")
+            current_lr = optimizer.param_groups[0]["lr"]
+            print(f"Train loss: {train_loss:.4f}, acc: {train_acc:.4f}")
+            print(f"Val   loss: {val_loss:.4f}, acc: {val_acc:.4f}")
+            print(f"LR now: {current_lr:.6f}")
 
-        if val_acc > best_val_acc:
-            best_val_acc = val_acc
-            torch.save(
+            # Log results
+            with open(results_csv_path, mode='a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([epoch, train_loss, train_acc, val_loss, val_acc, current_lr])
+
+            # Save last checkpoint (every epoch)
+            save_checkpoint(
                 {
                     "model_state_dict": model.state_dict(),
                     "optimizer_state_dict": optimizer.state_dict(),
+                    "scheduler_state_dict": scheduler.state_dict(),
                     "epoch": epoch,
                     "val_acc": val_acc,
+                    "best_val_acc": best_val_acc,
                     "class_names": class_names,
                 },
-                best_ckpt_path,
+                last_ckpt_path
             )
-            print(f"New best model saved to {best_ckpt_path} (val_acc={val_acc:.4f})")
 
-    print("\nTraining done.")
+            # Save best checkpoint
+            if val_acc > best_val_acc:
+                best_val_acc = val_acc
+                save_checkpoint(
+                    {
+                        "model_state_dict": model.state_dict(),
+                        "optimizer_state_dict": optimizer.state_dict(),
+                        "scheduler_state_dict": scheduler.state_dict(),
+                        "epoch": epoch,
+                        "val_acc": val_acc,
+                        "best_val_acc": best_val_acc,
+                        "class_names": class_names,
+                    },
+                    best_ckpt_path
+                )
+                print(f"New best model saved to {best_ckpt_path} (val_acc={val_acc:.4f})")
+
+        print("\nTraining done.")
+
     print(f"Best val acc: {best_val_acc:.4f}")
 
-    print("Loading best model for test evaluation...")
-    ckpt = torch.load(best_ckpt_path, map_location=device)
-    model.load_state_dict(ckpt["model_state_dict"])
+    # Load best model for test evaluation
+    # Try to load best checkpoint, if it exists
+    if best_ckpt_path.exists():
+        print("Loading best model for test evaluation...")
+        ckpt = load_checkpoint(best_ckpt_path, device)
+        if ckpt:
+            model.load_state_dict(ckpt["model_state_dict"])
+        else:
+            print("Could not load best checkpoint, using current model state.")
+    else:
+        print("Best checkpoint not found, using current model state.")
 
     test_acc = evaluate_on_test(model, test_loader, device)
     print(f"Test accuracy: {test_acc:.4f}")

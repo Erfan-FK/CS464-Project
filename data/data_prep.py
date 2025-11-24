@@ -166,7 +166,7 @@ def load_splits(splits_dir):
 
 def load_class_weights(splits_dir):
     splits_dir = Path(splits_dir)
-    class_weights = torch.load(splits_dir / "class_weights.pt", map_location="cpu")
+    class_weights = torch.load(splits_dir / "class_weights.pt", map_location="cpu", weights_only=True)
     return class_weights
 
 
