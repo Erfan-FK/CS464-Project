@@ -1,0 +1,320 @@
+nohup: ignoring input
+/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Using device: cuda
+Building dataloaders
+Loading existing splits...
+DataLoaders ready.
+#train batches: 162, #val batches: 35, #test batches: 35
+#classes: 47
+Building CNN model
+Found best checkpoint at /data6/erfan/464/project/CNN/cnn_best.pt, attempting to resume.
+Warning: weights_only=True failed, retrying with weights_only=False
+Failed to load checkpoint from /data6/erfan/464/project/CNN/cnn_best.pt: PytorchStreamReader failed reading zip archive: failed finding central directory
+No valid checkpoint found, starting from scratch.
+
+Epoch 1/500
+Train loss: 3.4648, acc: 0.0995
+Val   loss: 3.0561, acc: 0.1782
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.1782)
+
+Epoch 2/500
+Train loss: 3.1238, acc: 0.1615
+Val   loss: 2.8950, acc: 0.2238
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.2238)
+
+Epoch 3/500
+Train loss: 2.9391, acc: 0.1966
+Val   loss: 2.7403, acc: 0.2468
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.2468)
+
+Epoch 4/500
+Train loss: 2.7992, acc: 0.2204
+Val   loss: 2.6893, acc: 0.2523
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.2523)
+
+Epoch 5/500
+Train loss: 2.6892, acc: 0.2507
+Val   loss: 2.5771, acc: 0.2911
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.2911)
+
+Epoch 6/500
+Train loss: 2.6080, acc: 0.2676
+Val   loss: 2.5922, acc: 0.2920
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.2920)
+
+Epoch 7/500
+Train loss: 2.5007, acc: 0.2902
+Val   loss: 2.4996, acc: 0.3199
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.3199)
+
+Epoch 8/500
+Train loss: 2.4115, acc: 0.3095
+Val   loss: 2.1989, acc: 0.3827
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.3827)
+
+Epoch 9/500
+Train loss: 2.3126, acc: 0.3408
+Val   loss: 2.3415, acc: 0.3394
+LR now: 0.001000
+
+Epoch 10/500
+Train loss: 2.2389, acc: 0.3575
+Val   loss: 2.1153, acc: 0.4188
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.4188)
+
+Epoch 11/500
+Train loss: 2.1653, acc: 0.3719
+Val   loss: 2.0681, acc: 0.4025
+LR now: 0.001000
+
+Epoch 12/500
+Train loss: 2.1226, acc: 0.3809
+Val   loss: 1.9952, acc: 0.4346
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.4346)
+
+Epoch 13/500
+Train loss: 2.0488, acc: 0.3983
+Val   loss: 1.8768, acc: 0.4810
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.4810)
+
+Epoch 14/500
+Train loss: 1.9923, acc: 0.4205
+Val   loss: 1.9150, acc: 0.4589
+LR now: 0.001000
+
+Epoch 15/500
+Train loss: 1.9318, acc: 0.4270
+Val   loss: 1.8826, acc: 0.4630
+LR now: 0.001000
+
+Epoch 16/500
+Train loss: 1.8860, acc: 0.4433
+Val   loss: 1.8724, acc: 0.4842
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.4842)
+
+Epoch 17/500
+Train loss: 1.8277, acc: 0.4560
+Val   loss: 1.6704, acc: 0.5235
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.5235)
+
+Epoch 18/500
+Train loss: 1.7974, acc: 0.4733
+Val   loss: 1.6803, acc: 0.5370
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.5370)
+
+Epoch 19/500
+Train loss: 1.7597, acc: 0.4726
+Val   loss: 1.6512, acc: 0.5289
+LR now: 0.001000
+
+Epoch 20/500
+Train loss: 1.7198, acc: 0.4844
+Val   loss: 1.6376, acc: 0.5356
+LR now: 0.001000
+
+Epoch 21/500
+Train loss: 1.6822, acc: 0.4985
+Val   loss: 1.5497, acc: 0.5654
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.5654)
+
+Epoch 22/500
+Train loss: 1.6465, acc: 0.5038
+Val   loss: 1.6547, acc: 0.5388
+LR now: 0.001000
+
+Epoch 23/500
+Train loss: 1.6104, acc: 0.5145
+Val   loss: 1.6916, acc: 0.5244
+LR now: 0.001000
+
+Epoch 24/500
+Train loss: 1.5896, acc: 0.5204
+Val   loss: 1.9498, acc: 0.4829
+LR now: 0.001000
+
+Epoch 25/500
+Train loss: 1.5827, acc: 0.5192
+Val   loss: 1.5689, acc: 0.5663
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.5663)
+
+Epoch 26/500
+Train loss: 1.5345, acc: 0.5339
+Val   loss: 1.5024, acc: 0.5763
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.5763)
+
+Epoch 27/500
+Train loss: 1.5244, acc: 0.5368
+Val   loss: 1.7622, acc: 0.5095
+LR now: 0.001000
+
+Epoch 28/500
+Train loss: 1.4655, acc: 0.5535
+Val   loss: 1.4793, acc: 0.5763
+LR now: 0.001000
+
+Epoch 29/500
+Train loss: 1.4511, acc: 0.5540
+Val   loss: 1.5845, acc: 0.5681
+LR now: 0.001000
+
+Epoch 30/500
+Train loss: 1.4062, acc: 0.5696
+Val   loss: 1.7015, acc: 0.5523
+LR now: 0.001000
+
+Epoch 31/500
+Train loss: 1.4048, acc: 0.5644
+Val   loss: 1.3208, acc: 0.6241
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.6241)
+
+Epoch 32/500
+Train loss: 1.3828, acc: 0.5747
+Val   loss: 1.3741, acc: 0.6137
+LR now: 0.001000
+
+Epoch 33/500
+Train loss: 1.3308, acc: 0.5895
+Val   loss: 1.4075, acc: 0.6060
+LR now: 0.001000
+
+Epoch 34/500
+Train loss: 1.3351, acc: 0.5856
+Val   loss: 1.5040, acc: 0.5826
+LR now: 0.001000
+
+Epoch 35/500
+Train loss: 1.2879, acc: 0.5990
+Val   loss: 1.3743, acc: 0.6178
+LR now: 0.001000
+
+Epoch 36/500
+Train loss: 1.2856, acc: 0.5966
+Val   loss: 1.3924, acc: 0.6115
+LR now: 0.001000
+
+Epoch 37/500
+Train loss: 1.2736, acc: 0.5967
+Val   loss: 1.4140, acc: 0.6011
+LR now: 0.000100
+
+Epoch 38/500
+Train loss: 1.1277, acc: 0.6417
+Val   loss: 1.1333, acc: 0.6859
+LR now: 0.000100
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.6859)
+
+Epoch 39/500
+Train loss: 1.0792, acc: 0.6578
+Val   loss: 1.1039, acc: 0.7017
+LR now: 0.000100
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.7017)
+
+Epoch 40/500
+Train loss: 1.0491, acc: 0.6642
+Val   loss: 1.0961, acc: 0.7085
+LR now: 0.000100
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.7085)
+
+Epoch 41/500
+Train loss: 1.0208, acc: 0.6730
+Val   loss: 1.1101, acc: 0.7017
+LR now: 0.000100
+
+Epoch 42/500
+Train loss: 1.0248, acc: 0.6731
+Val   loss: 1.1010, acc: 0.7004
+LR now: 0.000100
+
+Epoch 43/500
+Train loss: 1.0000, acc: 0.6811
+Val   loss: 1.1279, acc: 0.6904
+LR now: 0.000100
+
+Epoch 44/500
+Train loss: 1.0099, acc: 0.6775
+Val   loss: 1.1045, acc: 0.6936
+LR now: 0.000100
+
+Epoch 45/500
+Train loss: 0.9899, acc: 0.6784
+Val   loss: 1.1126, acc: 0.6977
+LR now: 0.000100
+
+Epoch 46/500
+Train loss: 0.9805, acc: 0.6880
+Val   loss: 1.0859, acc: 0.7044
+LR now: 0.000010
+
+Epoch 47/500
+Train loss: 0.9692, acc: 0.6862
+Val   loss: 1.0877, acc: 0.7044
+LR now: 0.000010
+
+Epoch 48/500
+Train loss: 0.9456, acc: 0.6973
+Val   loss: 1.0769, acc: 0.7076
+LR now: 0.000010
+
+Epoch 49/500
+Train loss: 0.9393, acc: 0.6933
+Val   loss: 1.0778, acc: 0.7107
+LR now: 0.000010
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.7107)
+
+Epoch 50/500
+Train loss: 0.9520, acc: 0.6929
+Val   loss: 1.0753, acc: 0.7089
+LR now: 0.000010
+
+Epoch 51/500
+Train loss: 0.9382, acc: 0.6960
+Val   loss: 1.0750, acc: 0.7076
+LR now: 0.000010
+
+Epoch 52/500
+Train loss: 0.9495, acc: 0.6911
+Val   loss: 1.0721, acc: 0.7139
+LR now: 0.000010
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.7139)
+
+Epoch 53/500
+Train loss: 0.9550, acc: 0.6961
+Val   loss: 1.0662, acc: 0.7144
+LR now: 0.000010
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.7144)
+
+Epoch 54/500
+Train loss: 0.9454, acc: 0.6952
+Val   loss: 1.0854, acc: 0.7076
+LR now: 0.000010
+
+Epoch 55/500
+Train loss: 0.9486, acc: 0.6928
+Val   loss: 1.0712, acc: 0.7112
+LR now: 0.000010
+
+Epoch 56/500
+Train loss: 0.9355, acc: 0.7000
+Val   loss: 1.0741, acc: 0.7121
+LR now: 0.000010
+
+Epoch 57/500

@@ -232,7 +232,7 @@ def main():
     
     # Add a scheduler for better convergence
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='max', factor=0.1, patience=5, verbose=True
+        optimizer, mode='max', factor=0.5, patience=15, min_lr=1e-6, verbose=True
     )
 
     best_ckpt_path = out_dir / "cnn_best.pt"
@@ -278,7 +278,7 @@ def main():
             # Reset model and optimizer if partial load messed things up
             model = CNN(num_classes=num_classes).to(device)
             optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
-            scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.1, patience=5, verbose=True)
+            scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=15, min_lr=1e-6, verbose=True)
 
     else:
         print("No valid checkpoint found, starting from scratch.")
