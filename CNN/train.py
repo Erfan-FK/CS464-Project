@@ -230,11 +230,6 @@ def main():
         weight_decay=args.weight_decay,
     )
     
-    # Add a scheduler for better convergence
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='max', factor=0.5, patience=15, min_lr=1e-6, verbose=True
-    )
-
     best_ckpt_path = out_dir / "cnn_best.pt"
     last_ckpt_path = out_dir / "cnn_last.pt"
     results_csv_path = out_dir / "results.csv"
@@ -263,12 +258,15 @@ def main():
         try:
             model.load_state_dict(ckpt["model_state_dict"])
             optimizer.load_state_dict(ckpt["optimizer_state_dict"])
+            
+            # Force learning rate to args.lr to reset it to the constant value
+            for param_group in optimizer.param_groups:
+                param_group['lr'] = args.lr
+            print(f"Forced learning rate to {args.lr}")
+
             start_epoch = ckpt.get("epoch", 0) + 1
             best_val_acc = ckpt.get("best_val_acc", ckpt.get("val_acc", 0.0))
             
-            if "scheduler_state_dict" in ckpt:
-                scheduler.load_state_dict(ckpt["scheduler_state_dict"])
-                
             print(f"Resuming from epoch {start_epoch} (best_val_acc={best_val_acc:.4f})")
         except Exception as e:
             print(f"Error restoring state from checkpoint: {e}")
@@ -278,7 +276,6 @@ def main():
             # Reset model and optimizer if partial load messed things up
             model = CNN(num_classes=num_classes).to(device)
             optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
-            scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=15, min_lr=1e-6, verbose=True)
 
     else:
         print("No valid checkpoint found, starting from scratch.")
@@ -297,9 +294,6 @@ def main():
                 model, val_loader, criterion, device
             )
             
-            # Step scheduler
-            scheduler.step(val_acc)
-
             current_lr = optimizer.param_groups[0]["lr"]
             print(f"Train loss: {train_loss:.4f}, acc: {train_acc:.4f}")
             print(f"Val   loss: {val_loss:.4f}, acc: {val_acc:.4f}")
@@ -315,7 +309,6 @@ def main():
                 {
                     "model_state_dict": model.state_dict(),
                     "optimizer_state_dict": optimizer.state_dict(),
-                    "scheduler_state_dict": scheduler.state_dict(),
                     "epoch": epoch,
                     "val_acc": val_acc,
                     "best_val_acc": best_val_acc,
@@ -331,7 +324,6 @@ def main():
                     {
                         "model_state_dict": model.state_dict(),
                         "optimizer_state_dict": optimizer.state_dict(),
-                        "scheduler_state_dict": scheduler.state_dict(),
                         "epoch": epoch,
                         "val_acc": val_acc,
                         "best_val_acc": best_val_acc,
