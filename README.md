@@ -5,6 +5,7 @@
 *   **`data/data_prep.py`**: Handles data splitting (train/val/test) and computes class weights to handle class imbalance. It generates indices in `data/splits/`.
 *   **`data/extract_features.py`**: Runs a pre-trained ResNet18 (without the final classification layer) on the dataset to extract 512-dimensional feature vectors for every image. Saves these features to `.npz` files in `features/`.
 *   **`CNN/train.py`**: A sample script that trains a simple Convolutional Neural Network (CNN) from scratch using the raw image data and the generated splits.
+*   **`Random_Forest/train.py`**: Trains a scikit-learn RandomForest on the precomputed feature `.npz` files and saves metrics/model artifacts.
 
 ## Environment Setup
 
@@ -44,6 +45,9 @@ python data/data_prep.py --data_root data/house_plant_species --splits_dir data/
 
 # Extract features (requires splits to exist)
 python data/extract_features.py --data_root data/house_plant_species --splits_dir data/splits --out_dir features/
+
+# Train Random Forest on features
+python Random_Forest/train.py --features_dir features --out_dir Random_Forest/output
 ```
 
 Since feature extraction is already complete, you do **not** need to load raw images or perform computationally expensive preprocessing. You can load the pre-computed feature vectors directly.
