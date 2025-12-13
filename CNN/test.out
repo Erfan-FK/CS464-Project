@@ -1,0 +1,80 @@
+nohup: ignoring input
+Using device: cuda
+Building dataloaders (only test loader will be used)...
+Loading existing splits...
+DataLoaders ready.
+#train batches: 162, #val batches: 35, #test batches: 35
+#classes: 47
+Loading checkpoint from: /data6/erfan/464/project/CNN/output/cnn_best.pt
+Running inference on test set...
+
+=== Test set metrics ===
+Accuracy     : 0.8512
+Macro F1     : 0.8350
+Micro F1     : 0.8512
+Weighted F1  : 0.8496
+
+=== Per-class metrics (good for imbalance) ===
+                                            precision    recall  f1-score   support
+
+     African Violet (Saintpaulia ionantha)     0.9423    0.9608    0.9515        51
+                                 Aloe Vera     0.8293    0.9189    0.8718        37
+          Anthurium (Anthurium andraeanum)     0.8400    0.9265    0.8811        68
+             Areca Palm (Dypsis lutescens)     0.8333    0.8929    0.8621        28
+       Asparagus Fern (Asparagus setaceus)     0.8621    1.0000    0.9259        25
+                    Begonia (Begonia spp.)     0.6207    0.5143    0.5625        35
+     Bird of Paradise (Strelitzia reginae)     0.7143    0.9259    0.8065        27
+         Birds Nest Fern (Asplenium nidus)     0.9688    0.7045    0.8158        44
+        Boston Fern (Nephrolepis exaltata)     0.9348    0.9348    0.9348        46
+                                  Calathea     0.8108    0.6000    0.6897        50
+      Cast Iron Plant (Aspidistra elatior)     0.6809    0.8000    0.7356        40
+ Chinese Money Plant (Pilea peperomioides)     0.8983    0.9138    0.9060        58
+             Chinese evergreen (Aglaonema)     0.8485    0.7273    0.7832        77
+Christmas Cactus (Schlumbergera bridgesii)     0.9167    0.9362    0.9263        47
+                             Chrysanthemum     0.7368    0.9032    0.8116        31
+                                 Ctenanthe     0.7500    0.8654    0.8036        52
+                Daffodils (Narcissus spp.)     0.8939    0.9365    0.9147        63
+                                  Dracaena     0.7143    0.6410    0.6757        39
+            Dumb Cane (Dieffenbachia spp.)     0.8810    0.9136    0.8970        81
+              Elephant Ear (Alocasia spp.)     0.6415    0.6800    0.6602        50
+                English Ivy (Hedera helix)     0.8049    0.9167    0.8571        36
+          Hyacinth (Hyacinthus orientalis)     1.0000    0.7917    0.8837        48
+    Iron Cross begonia (Begonia masoniana)     0.8889    1.0000    0.9412        40
+               Jade plant (Crassula ovata)     0.8276    0.9057    0.8649        53
+                                 Kalanchoe     0.6875    0.5789    0.6286        19
+                     Lilium (Hemerocallis)     0.9016    0.7639    0.8271        72
+  Lily of the valley (Convallaria majalis)     0.9831    0.9355    0.9587        62
+             Money Tree (Pachira aquatica)     0.7593    0.7593    0.7593        54
+   Monstera Deliciosa (Monstera deliciosa)     0.8333    0.9146    0.8721        82
+                                    Orchid     0.8333    0.8571    0.8451        35
+         Parlor Palm (Chamaedorea elegans)     0.8868    0.9400    0.9126        50
+                                Peace lily     0.8868    0.8103    0.8468        58
+        Poinsettia (Euphorbia pulcherrima)     0.8627    0.9565    0.9072        46
+ Polka Dot Plant (Hypoestes phyllostachya)     0.8889    0.9412    0.9143        51
+      Ponytail Palm (Beaucarnea recurvata)     0.7500    0.9310    0.8308        29
+                         Pothos (Ivy arum)     0.8056    0.8056    0.8056        36
+         Prayer Plant (Maranta leuconeura)     0.9643    0.9000    0.9310        60
+   Rattlesnake Plant (Calathea lancifolia)     0.9783    0.9574    0.9677        47
+             Rubber Plant (Ficus elastica)     0.8780    0.8372    0.8571        43
+                Sago Palm (Cycas revoluta)     0.7436    0.9667    0.8406        30
+                                Schefflera     0.9268    0.7755    0.8444        49
+                  Snake plant (Sanseviera)     0.8793    0.8500    0.8644        60
+                              Tradescantia     0.9318    0.8039    0.8632        51
+                                     Tulip     0.8958    0.8431    0.8687        51
+                             Venus Flytrap     1.0000    0.8333    0.9091        30
+                                     Yucca     0.5000    0.3000    0.3750        10
+         ZZ Plant (Zamioculcas zamiifolia)     0.8286    0.8788    0.8529        66
+
+                                  accuracy                         0.8512      2217
+                                 macro avg     0.8393    0.8394    0.8350      2217
+                              weighted avg     0.8550    0.8512    0.8496      2217
+
+Confusion matrix (rows=true, cols=pred):
+[[49  0  1 ...  0  0  0]
+ [ 0 34  0 ...  0  0  1]
+ [ 0  0 63 ...  0  0  0]
+ ...
+ [ 0  2  0 ... 25  0  0]
+ [ 0  0  0 ...  0  3  0]
+ [ 0  0  0 ...  0  0 58]]
+Class order: ['African Violet (Saintpaulia ionantha)', 'Aloe Vera', 'Anthurium (Anthurium andraeanum)', 'Areca Palm (Dypsis lutescens)', 'Asparagus Fern (Asparagus setaceus)', 'Begonia (Begonia spp.)', 'Bird of Paradise (Strelitzia reginae)', 'Birds Nest Fern (Asplenium nidus)', 'Boston Fern (Nephrolepis exaltata)', 'Calathea', 'Cast Iron Plant (Aspidistra elatior)', 'Chinese Money Plant (Pilea peperomioides)', 'Chinese evergreen (Aglaonema)', 'Christmas Cactus (Schlumbergera bridgesii)', 'Chrysanthemum', 'Ctenanthe', 'Daffodils (Narcissus spp.)', 'Dracaena', 'Dumb Cane (Dieffenbachia spp.)', 'Elephant Ear (Alocasia spp.)', 'English Ivy (Hedera helix)', 'Hyacinth (Hyacinthus orientalis)', 'Iron Cross begonia (Begonia masoniana)', 'Jade plant (Crassula ovata)', 'Kalanchoe', 'Lilium (Hemerocallis)', 'Lily of the valley (Convallaria majalis)', 'Money Tree (Pachira aquatica)', 'Monstera Deliciosa (Monstera deliciosa)', 'Orchid', 'Parlor Palm (Chamaedorea elegans)', 'Peace lily', 'Poinsettia (Euphorbia pulcherrima)', 'Polka Dot Plant (Hypoestes phyllostachya)', 'Ponytail Palm (Beaucarnea recurvata)', 'Pothos (Ivy arum)', 'Prayer Plant (Maranta leuconeura)', 'Rattlesnake Plant (Calathea lancifolia)', 'Rubber Plant (Ficus elastica)', 'Sago Palm (Cycas revoluta)', 'Schefflera', 'Snake plant (Sanseviera)', 'Tradescantia', 'Tulip', 'Venus Flytrap', 'Yucca', 'ZZ Plant (Zamioculcas zamiifolia)']

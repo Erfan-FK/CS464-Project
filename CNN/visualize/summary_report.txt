@@ -1,0 +1,62 @@
+================================================================================
+CNN TRAINING AND TEST RESULTS SUMMARY
+================================================================================
+
+TRAINING SUMMARY
+--------------------------------------------------------------------------------
+Total Epochs: 650
+Final Training Loss: 0.2122
+Final Training Accuracy: 0.9292
+Final Validation Loss: 0.9266
+Final Validation Accuracy: 0.8425
+Best Validation Accuracy: 0.8606 (Epoch 610)
+Best Training Accuracy: 0.9870 (Epoch 503)
+Lowest Validation Loss: 0.6926 (Epoch 644)
+
+TEST SET SUMMARY
+--------------------------------------------------------------------------------
+Test Accuracy: 0.8512
+Test Macro F1: 0.8350
+
+PER-CLASS PERFORMANCE
+--------------------------------------------------------------------------------
+Mean F1 Score: 0.8350
+Std F1 Score: 0.1116
+Best Class: Rattlesnake Plant (Calathea lancifolia) (F1: 0.9677)
+Worst Class: Yucca (F1: 0.3750)
+
+CLASS IMBALANCE ANALYSIS
+--------------------------------------------------------------------------------
+Total Test Samples: 2217
+Median Class Size: 48
+Min Class Size: 10
+Max Class Size: 82
+Imbalance Ratio (Max/Min): 8.20
+
+MINORITY CLASSES (n=13):
+  Support Range: 10 - 36
+  Avg Support: 28.5
+  Avg Precision: 0.7609 (±0.1218)
+  Avg Recall: 0.8020 (±0.2079)
+  Avg F1: 0.7739 (±0.1574)
+
+MEDIUM CLASSES (n=22):
+  Support Range: 37 - 54
+  Avg Support: 47.2
+  Avg Precision: 0.8597 (±0.0982)
+  Avg Recall: 0.8433 (±0.1142)
+  Avg F1: 0.8477 (±0.0915)
+
+MAJORITY CLASSES (n=12):
+  Support Range: 58 - 82
+  Avg Support: 67.2
+  Avg Precision: 0.8866 (±0.0483)
+  Avg Recall: 0.8726 (±0.0702)
+  Avg F1: 0.8779 (±0.0479)
+
+CORRELATION (Support vs Performance):
+  Support vs Precision: +0.4526
+  Support vs Recall: +0.2620
+  Support vs F1: +0.4011
+
+================================================================================

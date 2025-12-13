@@ -1,0 +1,653 @@
+nohup: ignoring input
+Using device: cuda
+Building dataloaders
+Loading existing splits...
+DataLoaders ready.
+#train batches: 162, #val batches: 35, #test batches: 35
+#classes: 47
+Building CNN model
+Found last checkpoint at /data6/erfan/464/project/CNN/cnn_last.pt, attempting to resume.
+Forced learning rate to 0.001
+Resuming from epoch 503 (best_val_acc=0.8533)
+
+Epoch 503/1000
+Train loss: 0.0473, acc: 0.9870
+Val   loss: 0.8356, acc: 0.8515
+LR now: 0.001000
+
+Epoch 504/1000
+Train loss: 0.0455, acc: 0.9870
+Val   loss: 0.9697, acc: 0.8403
+LR now: 0.001000
+
+Epoch 505/1000
+Train loss: 0.2651, acc: 0.9123
+Val   loss: 0.9932, acc: 0.8091
+LR now: 0.001000
+
+Epoch 506/1000
+Train loss: 0.2630, acc: 0.9110
+Val   loss: 1.0674, acc: 0.8163
+LR now: 0.001000
+
+Epoch 507/1000
+Train loss: 0.2446, acc: 0.9180
+Val   loss: 0.9250, acc: 0.8240
+LR now: 0.001000
+
+Epoch 508/1000
+Train loss: 0.2328, acc: 0.9213
+Val   loss: 0.8760, acc: 0.8326
+LR now: 0.001000
+
+Epoch 509/1000
+Train loss: 0.2372, acc: 0.9206
+Val   loss: 0.7855, acc: 0.8344
+LR now: 0.001000
+
+Epoch 510/1000
+Train loss: 0.2385, acc: 0.9223
+Val   loss: 0.8575, acc: 0.8330
+LR now: 0.001000
+
+Epoch 511/1000
+Train loss: 0.2288, acc: 0.9231
+Val   loss: 0.9012, acc: 0.8258
+LR now: 0.001000
+
+Epoch 512/1000
+Train loss: 0.2558, acc: 0.9159
+Val   loss: 0.9970, acc: 0.8154
+LR now: 0.001000
+
+Epoch 513/1000
+Train loss: 0.2242, acc: 0.9247
+Val   loss: 0.8723, acc: 0.8430
+LR now: 0.001000
+
+Epoch 514/1000
+Train loss: 0.2098, acc: 0.9302
+Val   loss: 0.9821, acc: 0.8190
+LR now: 0.001000
+
+Epoch 515/1000
+Train loss: 0.2472, acc: 0.9197
+Val   loss: 0.7895, acc: 0.8452
+LR now: 0.001000
+
+Epoch 516/1000
+Train loss: 0.2305, acc: 0.9239
+Val   loss: 0.8811, acc: 0.8326
+LR now: 0.001000
+
+Epoch 517/1000
+Train loss: 0.2026, acc: 0.9305
+Val   loss: 0.7333, acc: 0.8452
+LR now: 0.001000
+
+Epoch 518/1000
+Train loss: 0.2165, acc: 0.9266
+Val   loss: 0.8516, acc: 0.8276
+LR now: 0.001000
+
+Epoch 519/1000
+Train loss: 0.2310, acc: 0.9225
+Val   loss: 0.9830, acc: 0.8245
+LR now: 0.001000
+
+Epoch 520/1000
+Train loss: 0.2295, acc: 0.9217
+Val   loss: 0.7423, acc: 0.8448
+LR now: 0.001000
+
+Epoch 521/1000
+Train loss: 0.2293, acc: 0.9247
+Val   loss: 0.7972, acc: 0.8380
+LR now: 0.001000
+
+Epoch 522/1000
+Train loss: 0.1938, acc: 0.9323
+Val   loss: 1.0767, acc: 0.8190
+LR now: 0.001000
+
+Epoch 523/1000
+Train loss: 0.2173, acc: 0.9270
+Val   loss: 0.9195, acc: 0.8195
+LR now: 0.001000
+
+Epoch 524/1000
+Train loss: 0.2239, acc: 0.9268
+Val   loss: 1.0580, acc: 0.8114
+LR now: 0.001000
+
+Epoch 525/1000
+Train loss: 0.2064, acc: 0.9304
+Val   loss: 0.8069, acc: 0.8326
+LR now: 0.001000
+
+Epoch 526/1000
+Train loss: 0.2306, acc: 0.9235
+Val   loss: 1.0285, acc: 0.8023
+LR now: 0.001000
+
+Epoch 527/1000
+Train loss: 0.2386, acc: 0.9197
+Val   loss: 0.9314, acc: 0.8159
+LR now: 0.001000
+
+Epoch 528/1000
+Train loss: 0.2065, acc: 0.9302
+Val   loss: 0.8427, acc: 0.8321
+LR now: 0.001000
+
+Epoch 529/1000
+Train loss: 0.2150, acc: 0.9243
+Val   loss: 0.9528, acc: 0.8186
+LR now: 0.001000
+
+Epoch 530/1000
+Train loss: 0.2182, acc: 0.9262
+Val   loss: 0.8934, acc: 0.8299
+LR now: 0.001000
+
+Epoch 531/1000
+Train loss: 0.2344, acc: 0.9226
+Val   loss: 0.7190, acc: 0.8475
+LR now: 0.001000
+
+Epoch 532/1000
+Train loss: 0.2289, acc: 0.9229
+Val   loss: 0.8859, acc: 0.8154
+LR now: 0.001000
+
+Epoch 533/1000
+Train loss: 0.2354, acc: 0.9200
+Val   loss: 0.8292, acc: 0.8394
+LR now: 0.001000
+
+Epoch 534/1000
+Train loss: 0.2353, acc: 0.9240
+Val   loss: 0.7548, acc: 0.8290
+LR now: 0.001000
+
+Epoch 535/1000
+Train loss: 0.2046, acc: 0.9315
+Val   loss: 0.9587, acc: 0.8141
+LR now: 0.001000
+
+Epoch 536/1000
+Train loss: 0.1958, acc: 0.9351
+Val   loss: 0.7525, acc: 0.8421
+LR now: 0.001000
+
+Epoch 537/1000
+Train loss: 0.2126, acc: 0.9244
+Val   loss: 0.9208, acc: 0.8051
+LR now: 0.001000
+
+Epoch 538/1000
+Train loss: 0.2051, acc: 0.9315
+Val   loss: 1.0484, acc: 0.8005
+LR now: 0.001000
+
+Epoch 539/1000
+Train loss: 0.2220, acc: 0.9236
+Val   loss: 0.8670, acc: 0.8199
+LR now: 0.001000
+
+Epoch 540/1000
+Train loss: 0.2895, acc: 0.9085
+Val   loss: 0.9039, acc: 0.8299
+LR now: 0.001000
+
+Epoch 541/1000
+Train loss: 0.2271, acc: 0.9215
+Val   loss: 0.7781, acc: 0.8394
+LR now: 0.001000
+
+Epoch 542/1000
+Train loss: 0.2227, acc: 0.9254
+Val   loss: 0.8173, acc: 0.8425
+LR now: 0.001000
+
+Epoch 543/1000
+Train loss: 0.2256, acc: 0.9275
+Val   loss: 0.8785, acc: 0.8339
+LR now: 0.001000
+
+Epoch 544/1000
+Train loss: 0.2278, acc: 0.9250
+Val   loss: 0.8893, acc: 0.8114
+LR now: 0.001000
+
+Epoch 545/1000
+Train loss: 0.2016, acc: 0.9319
+Val   loss: 0.8438, acc: 0.8281
+LR now: 0.001000
+
+Epoch 546/1000
+Train loss: 0.2087, acc: 0.9305
+Val   loss: 0.8362, acc: 0.8362
+LR now: 0.001000
+
+Epoch 547/1000
+Train loss: 0.2237, acc: 0.9256
+Val   loss: 0.8836, acc: 0.8159
+LR now: 0.001000
+
+Epoch 548/1000
+Train loss: 0.2216, acc: 0.9296
+Val   loss: 0.7315, acc: 0.8389
+LR now: 0.001000
+
+Epoch 549/1000
+Train loss: 0.2109, acc: 0.9301
+Val   loss: 0.8548, acc: 0.8272
+LR now: 0.001000
+
+Epoch 550/1000
+Train loss: 0.2104, acc: 0.9308
+Val   loss: 0.7644, acc: 0.8348
+LR now: 0.001000
+
+Epoch 551/1000
+Train loss: 0.2021, acc: 0.9311
+Val   loss: 0.9020, acc: 0.8240
+LR now: 0.001000
+
+Epoch 552/1000
+Train loss: 0.2100, acc: 0.9280
+Val   loss: 0.8670, acc: 0.8303
+LR now: 0.001000
+
+Epoch 553/1000
+Train loss: 0.2216, acc: 0.9254
+Val   loss: 0.8100, acc: 0.8326
+LR now: 0.001000
+
+Epoch 554/1000
+Train loss: 0.2222, acc: 0.9285
+Val   loss: 0.8391, acc: 0.8425
+LR now: 0.001000
+
+Epoch 555/1000
+Train loss: 0.2112, acc: 0.9311
+Val   loss: 0.8718, acc: 0.8294
+LR now: 0.001000
+
+Epoch 556/1000
+Train loss: 0.2046, acc: 0.9315
+Val   loss: 0.9522, acc: 0.8326
+LR now: 0.001000
+
+Epoch 557/1000
+Train loss: 0.2303, acc: 0.9257
+Val   loss: 0.8701, acc: 0.8317
+LR now: 0.001000
+
+Epoch 558/1000
+Train loss: 0.2013, acc: 0.9317
+Val   loss: 0.9391, acc: 0.8231
+LR now: 0.001000
+
+Epoch 559/1000
+Train loss: 0.2302, acc: 0.9258
+Val   loss: 1.0638, acc: 0.8177
+LR now: 0.001000
+
+Epoch 560/1000
+Train loss: 0.2319, acc: 0.9240
+Val   loss: 0.7938, acc: 0.8443
+LR now: 0.001000
+
+Epoch 561/1000
+Train loss: 0.2244, acc: 0.9260
+Val   loss: 0.7890, acc: 0.8308
+LR now: 0.001000
+
+Epoch 562/1000
+Train loss: 0.2133, acc: 0.9267
+Val   loss: 0.7797, acc: 0.8348
+LR now: 0.001000
+
+Epoch 563/1000
+Train loss: 0.2020, acc: 0.9312
+Val   loss: 0.9856, acc: 0.8087
+LR now: 0.001000
+
+Epoch 564/1000
+Train loss: 0.2235, acc: 0.9232
+Val   loss: 0.8901, acc: 0.8254
+LR now: 0.001000
+
+Epoch 565/1000
+Train loss: 0.2200, acc: 0.9263
+Val   loss: 0.8045, acc: 0.8353
+LR now: 0.001000
+
+Epoch 566/1000
+Train loss: 0.2192, acc: 0.9250
+Val   loss: 0.9196, acc: 0.8208
+LR now: 0.001000
+
+Epoch 567/1000
+Train loss: 0.2014, acc: 0.9314
+Val   loss: 0.8509, acc: 0.8362
+LR now: 0.001000
+
+Epoch 568/1000
+Train loss: 0.2313, acc: 0.9270
+Val   loss: 0.8366, acc: 0.8335
+LR now: 0.001000
+
+Epoch 569/1000
+Train loss: 0.2298, acc: 0.9232
+Val   loss: 0.8943, acc: 0.8208
+LR now: 0.001000
+
+Epoch 570/1000
+Train loss: 0.2014, acc: 0.9303
+Val   loss: 0.8180, acc: 0.8362
+LR now: 0.001000
+
+Epoch 571/1000
+Train loss: 0.2478, acc: 0.9196
+Val   loss: 0.8420, acc: 0.8236
+LR now: 0.001000
+
+Epoch 572/1000
+Train loss: 0.2192, acc: 0.9254
+Val   loss: 0.8274, acc: 0.8299
+LR now: 0.001000
+
+Epoch 573/1000
+Train loss: 0.2212, acc: 0.9265
+Val   loss: 0.8537, acc: 0.8267
+LR now: 0.001000
+
+Epoch 574/1000
+Train loss: 0.2135, acc: 0.9262
+Val   loss: 1.0757, acc: 0.8087
+LR now: 0.001000
+
+Epoch 575/1000
+Train loss: 0.2052, acc: 0.9310
+Val   loss: 0.9252, acc: 0.8218
+LR now: 0.001000
+
+Epoch 576/1000
+Train loss: 0.1961, acc: 0.9344
+Val   loss: 0.8442, acc: 0.8366
+LR now: 0.001000
+
+Epoch 577/1000
+Train loss: 0.2010, acc: 0.9321
+Val   loss: 0.8258, acc: 0.8326
+LR now: 0.001000
+
+Epoch 578/1000
+Train loss: 0.2217, acc: 0.9227
+Val   loss: 0.9189, acc: 0.8357
+LR now: 0.001000
+
+Epoch 579/1000
+Train loss: 0.2214, acc: 0.9257
+Val   loss: 0.8508, acc: 0.8177
+LR now: 0.001000
+
+Epoch 580/1000
+Train loss: 0.2290, acc: 0.9197
+Val   loss: 0.9901, acc: 0.8227
+LR now: 0.001000
+
+Epoch 581/1000
+Train loss: 0.2275, acc: 0.9252
+Val   loss: 0.8557, acc: 0.8348
+LR now: 0.001000
+
+Epoch 582/1000
+Train loss: 0.2086, acc: 0.9295
+Val   loss: 0.8221, acc: 0.8511
+LR now: 0.001000
+
+Epoch 583/1000
+Train loss: 0.2059, acc: 0.9328
+Val   loss: 1.0197, acc: 0.8105
+LR now: 0.001000
+
+Epoch 584/1000
+Train loss: 0.2085, acc: 0.9285
+Val   loss: 0.8393, acc: 0.8218
+LR now: 0.001000
+
+Epoch 585/1000
+Train loss: 0.1959, acc: 0.9334
+Val   loss: 0.8524, acc: 0.8407
+LR now: 0.001000
+
+Epoch 586/1000
+Train loss: 0.2327, acc: 0.9196
+Val   loss: 0.8555, acc: 0.8362
+LR now: 0.001000
+
+Epoch 587/1000
+Train loss: 0.2157, acc: 0.9270
+Val   loss: 0.8044, acc: 0.8470
+LR now: 0.001000
+
+Epoch 588/1000
+Train loss: 0.2049, acc: 0.9322
+Val   loss: 0.7948, acc: 0.8398
+LR now: 0.001000
+
+Epoch 589/1000
+Train loss: 0.2042, acc: 0.9299
+Val   loss: 1.0449, acc: 0.8150
+LR now: 0.001000
+
+Epoch 590/1000
+Train loss: 0.2270, acc: 0.9260
+Val   loss: 0.7856, acc: 0.8276
+LR now: 0.001000
+
+Epoch 591/1000
+Train loss: 0.2158, acc: 0.9293
+Val   loss: 1.0175, acc: 0.8208
+LR now: 0.001000
+
+Epoch 592/1000
+Train loss: 0.2083, acc: 0.9254
+Val   loss: 0.7864, acc: 0.8326
+LR now: 0.001000
+
+Epoch 593/1000
+Train loss: 0.2136, acc: 0.9290
+Val   loss: 0.8090, acc: 0.8357
+LR now: 0.001000
+
+Epoch 594/1000
+Train loss: 0.2344, acc: 0.9199
+Val   loss: 0.9373, acc: 0.8245
+LR now: 0.001000
+
+Epoch 595/1000
+Train loss: 0.2138, acc: 0.9282
+Val   loss: 0.8804, acc: 0.8222
+LR now: 0.001000
+
+Epoch 596/1000
+Train loss: 0.2144, acc: 0.9265
+Val   loss: 1.0031, acc: 0.8208
+LR now: 0.001000
+
+Epoch 597/1000
+Train loss: 0.2248, acc: 0.9215
+Val   loss: 0.8568, acc: 0.8249
+LR now: 0.001000
+
+Epoch 598/1000
+Train loss: 0.2061, acc: 0.9313
+Val   loss: 0.8650, acc: 0.8389
+LR now: 0.001000
+
+Epoch 599/1000
+Train loss: 0.2070, acc: 0.9310
+Val   loss: 0.9109, acc: 0.8190
+LR now: 0.001000
+
+Epoch 600/1000
+Train loss: 0.2088, acc: 0.9315
+Val   loss: 0.8628, acc: 0.8258
+LR now: 0.001000
+
+Epoch 601/1000
+Train loss: 0.2081, acc: 0.9287
+Val   loss: 0.8665, acc: 0.8371
+LR now: 0.001000
+
+Epoch 602/1000
+Train loss: 0.2132, acc: 0.9273
+Val   loss: 0.7673, acc: 0.8362
+LR now: 0.001000
+
+Epoch 603/1000
+Train loss: 0.2082, acc: 0.9322
+Val   loss: 0.9095, acc: 0.8172
+LR now: 0.001000
+
+Epoch 604/1000
+Train loss: 0.2026, acc: 0.9307
+Val   loss: 0.9472, acc: 0.8136
+LR now: 0.001000
+
+Epoch 605/1000
+Train loss: 0.2166, acc: 0.9273
+Val   loss: 0.9588, acc: 0.8272
+LR now: 0.001000
+
+Epoch 606/1000
+Train loss: 0.2293, acc: 0.9249
+Val   loss: 0.7389, acc: 0.8439
+LR now: 0.001000
+
+Epoch 607/1000
+Train loss: 0.2100, acc: 0.9271
+Val   loss: 0.8955, acc: 0.8303
+LR now: 0.001000
+
+Epoch 608/1000
+Train loss: 0.2255, acc: 0.9239
+Val   loss: 0.8044, acc: 0.8308
+LR now: 0.001000
+
+Epoch 609/1000
+Train loss: 0.2133, acc: 0.9300
+Val   loss: 0.8613, acc: 0.8317
+LR now: 0.001000
+
+Epoch 610/1000
+Train loss: 0.2079, acc: 0.9271
+Val   loss: 0.7225, acc: 0.8606
+LR now: 0.001000
+New best model saved to /data6/erfan/464/project/CNN/cnn_best.pt (val_acc=0.8606)
+
+Epoch 611/1000
+Train loss: 0.2234, acc: 0.9252
+Val   loss: 0.8433, acc: 0.8384
+LR now: 0.001000
+
+Epoch 612/1000
+Train loss: 0.2110, acc: 0.9290
+Val   loss: 0.8376, acc: 0.8470
+LR now: 0.001000
+
+Epoch 613/1000
+Train loss: 0.2030, acc: 0.9317
+Val   loss: 0.8673, acc: 0.8254
+LR now: 0.001000
+
+Epoch 614/1000
+Train loss: 0.2082, acc: 0.9312
+Val   loss: 0.8807, acc: 0.8312
+LR now: 0.001000
+
+Epoch 615/1000
+Train loss: 0.2153, acc: 0.9291
+Val   loss: 0.8913, acc: 0.8290
+LR now: 0.001000
+
+Epoch 616/1000
+Train loss: 0.2392, acc: 0.9236
+Val   loss: 0.8679, acc: 0.8145
+LR now: 0.001000
+
+Epoch 617/1000
+Train loss: 0.2130, acc: 0.9283
+Val   loss: 0.8694, acc: 0.8276
+LR now: 0.001000
+
+Epoch 618/1000
+Traceback (most recent call last):
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/queues.py", line 244, in _feed
+    obj = _ForkingPickler.dumps(obj)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/site-packages/torch/multiprocessing/reductions.py", line 619, in reduce_storage
+    df = multiprocessing.reduction.DupFd(fd)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/reduction.py", line 198, in DupFd
+    return resource_sharer.DupFd(fd)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/resource_sharer.py", line 53, in __init__
+    self._id = _resource_sharer.register(send, close)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/resource_sharer.py", line 76, in register
+    self._start()
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/resource_sharer.py", line 126, in _start
+    self._listener = Listener(authkey=process.current_process().authkey, backlog=128)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/connection.py", line 458, in __init__
+    address = address or arbitrary_address(family)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/connection.py", line 77, in arbitrary_address
+    return tempfile.mktemp(prefix='listener-', dir=util.get_temp_dir())
+                                                   ^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/util.py", line 149, in get_temp_dir
+    tempdir = tempfile.mkdtemp(prefix='pymp-')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/tmp/pymp-2cj9kbku'
+Traceback (most recent call last):
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/queues.py", line 244, in _feed
+    obj = _ForkingPickler.dumps(obj)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/site-packages/torch/multiprocessing/reductions.py", line 619, in reduce_storage
+    df = multiprocessing.reduction.DupFd(fd)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/reduction.py", line 198, in DupFd
+    return resource_sharer.DupFd(fd)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/resource_sharer.py", line 53, in __init__
+    self._id = _resource_sharer.register(send, close)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/resource_sharer.py", line 76, in register
+    self._start()
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/resource_sharer.py", line 126, in _start
+    self._listener = Listener(authkey=process.current_process().authkey, backlog=128)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/connection.py", line 458, in __init__
+    address = address or arbitrary_address(family)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/connection.py", line 77, in arbitrary_address
+    return tempfile.mktemp(prefix='listener-', dir=util.get_temp_dir())
+                                                   ^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/multiprocessing/util.py", line 149, in get_temp_dir
+    tempdir = tempfile.mkdtemp(prefix='pymp-')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data6/erfan/miniconda3/envs/plant_env/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/tmp/pymp-bc_fhe7w'

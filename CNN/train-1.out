@@ -318,3 +318,18 @@ Val   loss: 1.0741, acc: 0.7121
 LR now: 0.000010
 
 Epoch 57/500
+Train loss: 0.9422, acc: 0.6934
+Val   loss: 1.0729, acc: 0.7112
+LR now: 0.000010
+
+Epoch 58/500
+Train loss: 0.9390, acc: 0.6991
+Val   loss: 1.0748, acc: 0.7130
+LR now: 0.000010
+
+Epoch 59/500
+Train loss: 0.9458, acc: 0.6908
+Val   loss: 1.0724, acc: 0.7125
+LR now: 0.000001
+
+Epoch 60/500

@@ -1,0 +1,121 @@
+nohup: ignoring input
+Using device: cuda
+Building dataloaders
+Loading existing splits...
+DataLoaders ready.
+#train batches: 162, #val batches: 35, #test batches: 35
+#classes: 47
+Building CNN model
+Found last checkpoint at /data6/erfan/464/project/CNN/cnn_last.pt, attempting to resume.
+Forced learning rate to 0.001
+Resuming from epoch 630 (best_val_acc=0.8606)
+
+Epoch 630/650
+Train loss: 0.1002, acc: 0.9652
+Val   loss: 0.9958, acc: 0.8403
+LR now: 0.001000
+
+Epoch 631/650
+Train loss: 0.0854, acc: 0.9734
+Val   loss: 0.7870, acc: 0.8488
+LR now: 0.001000
+
+Epoch 632/650
+Train loss: 0.0732, acc: 0.9752
+Val   loss: 0.9417, acc: 0.8466
+LR now: 0.001000
+
+Epoch 633/650
+Train loss: 0.0899, acc: 0.9682
+Val   loss: 1.0734, acc: 0.8127
+LR now: 0.001000
+
+Epoch 634/650
+Train loss: 0.0921, acc: 0.9699
+Val   loss: 0.9910, acc: 0.8317
+LR now: 0.001000
+
+Epoch 635/650
+Train loss: 0.1339, acc: 0.9562
+Val   loss: 1.0371, acc: 0.8181
+LR now: 0.001000
+
+Epoch 636/650
+Train loss: 0.1243, acc: 0.9589
+Val   loss: 0.9957, acc: 0.8317
+LR now: 0.001000
+
+Epoch 637/650
+Train loss: 0.1487, acc: 0.9481
+Val   loss: 1.0129, acc: 0.8199
+LR now: 0.001000
+
+Epoch 638/650
+Train loss: 0.1337, acc: 0.9555
+Val   loss: 1.0361, acc: 0.8154
+LR now: 0.001000
+
+Epoch 639/650
+Train loss: 0.1316, acc: 0.9580
+Val   loss: 0.9264, acc: 0.8380
+LR now: 0.001000
+
+Epoch 640/650
+Train loss: 0.1155, acc: 0.9625
+Val   loss: 0.9216, acc: 0.8407
+LR now: 0.001000
+
+Epoch 641/650
+Train loss: 0.1076, acc: 0.9616
+Val   loss: 1.2457, acc: 0.8010
+LR now: 0.001000
+
+Epoch 642/650
+Train loss: 0.3114, acc: 0.8980
+Val   loss: 0.8656, acc: 0.8240
+LR now: 0.001000
+
+Epoch 643/650
+Train loss: 0.2813, acc: 0.9034
+Val   loss: 0.8436, acc: 0.8285
+LR now: 0.001000
+
+Epoch 644/650
+Train loss: 0.2492, acc: 0.9149
+Val   loss: 0.6926, acc: 0.8461
+LR now: 0.001000
+
+Epoch 645/650
+Train loss: 0.2733, acc: 0.9119
+Val   loss: 0.8683, acc: 0.8254
+LR now: 0.001000
+
+Epoch 646/650
+Train loss: 0.2176, acc: 0.9249
+Val   loss: 0.9709, acc: 0.8204
+LR now: 0.001000
+
+Epoch 647/650
+Train loss: 0.2452, acc: 0.9167
+Val   loss: 0.7487, acc: 0.8389
+LR now: 0.001000
+
+Epoch 648/650
+Train loss: 0.2208, acc: 0.9262
+Val   loss: 0.7587, acc: 0.8299
+LR now: 0.001000
+
+Epoch 649/650
+Train loss: 0.2060, acc: 0.9287
+Val   loss: 0.9704, acc: 0.8213
+LR now: 0.001000
+
+Epoch 650/650
+Train loss: 0.2122, acc: 0.9292
+Val   loss: 0.9266, acc: 0.8425
+LR now: 0.001000
+
+Training done.
+Best val acc: 0.8606
+Loading best model for test evaluation...
+Test accuracy: 0.8512
