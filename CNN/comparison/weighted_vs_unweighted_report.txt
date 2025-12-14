@@ -1,0 +1,96 @@
+================================================================================
+WEIGHTED vs UNWEIGHTED LOSS COMPARISON REPORT
+================================================================================
+
+TRAINING PERFORMANCE
+--------------------------------------------------------------------------------
+Final Training Accuracy:
+  Weighted:   0.8138
+  Unweighted: 0.8350
+  Difference: -0.0213
+
+Final Validation Accuracy:
+  Weighted:   0.7396
+  Unweighted: 0.7789
+  Difference: -0.0393
+
+Best Validation Accuracy:
+  Weighted:   0.7793
+  Unweighted: 0.7911
+  Difference: -0.0117
+
+TEST SET PERFORMANCE
+--------------------------------------------------------------------------------
+Accuracy:
+  Weighted:   0.7781
+  Unweighted: 0.7925
+  Difference: -0.0144
+
+Macro F1 (average across all classes, unweighted):
+  Weighted:   0.7715
+  Unweighted: 0.7796
+  Difference: -0.0081
+
+Weighted F1 (weighted by support):
+  Weighted:   0.7763
+  Unweighted: 0.7887
+  Difference: -0.0124
+
+IMPACT ON CLASS CATEGORIES
+--------------------------------------------------------------------------------
+
+MINORITY CLASSES (n=13):
+  Precision:
+    Weighted:   0.7498
+    Unweighted: 0.7684
+    Difference: -0.0186
+  Recall:
+    Weighted:   0.7620
+    Unweighted: 0.7456
+    Difference: +0.0164
+  F1 Score:
+    Weighted:   0.7463
+    Unweighted: 0.7432
+    Difference: +0.0031
+
+MEDIUM CLASSES (n=22):
+  Precision:
+    Weighted:   0.7758
+    Unweighted: 0.8123
+    Difference: -0.0365
+  Recall:
+    Weighted:   0.7823
+    Unweighted: 0.7558
+    Difference: +0.0265
+  F1 Score:
+    Weighted:   0.7718
+    Unweighted: 0.7777
+    Difference: -0.0059
+
+MAJORITY CLASSES (n=12):
+  Precision:
+    Weighted:   0.8218
+    Unweighted: 0.7923
+    Difference: +0.0295
+  Recall:
+    Weighted:   0.7860
+    Unweighted: 0.8610
+    Difference: -0.0750
+  F1 Score:
+    Weighted:   0.7983
+    Unweighted: 0.8226
+    Difference: -0.0243
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+1. Macro F1 (treats all classes equally): -0.0081
+   → Unweighted loss performs better on average
+
+2. Minority Class F1 Improvement: +0.0031
+   → Weighted loss HELPS minority classes
+
+3. Overall Accuracy Difference: -0.0144
+
+================================================================================
