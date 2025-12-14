@@ -4,26 +4,26 @@ CNN TRAINING AND TEST RESULTS SUMMARY
 
 TRAINING SUMMARY
 --------------------------------------------------------------------------------
-Total Epochs: 650
-Final Training Loss: 0.2122
-Final Training Accuracy: 0.9292
-Final Validation Loss: 0.9266
-Final Validation Accuracy: 0.8425
-Best Validation Accuracy: 0.8606 (Epoch 610)
-Best Training Accuracy: 0.9870 (Epoch 503)
-Lowest Validation Loss: 0.6926 (Epoch 644)
+Total Epochs: 110
+Final Training Loss: 0.5533
+Final Training Accuracy: 0.8138
+Final Validation Loss: 1.1876
+Final Validation Accuracy: 0.7396
+Best Validation Accuracy: 0.7793 (Epoch 99)
+Best Training Accuracy: 0.8171 (Epoch 107)
+Lowest Validation Loss: 0.8990 (Epoch 107)
 
 TEST SET SUMMARY
 --------------------------------------------------------------------------------
-Test Accuracy: 0.8512
-Test Macro F1: 0.8350
+Test Accuracy: 0.7781
+Test Macro F1: 0.7715
 
 PER-CLASS PERFORMANCE
 --------------------------------------------------------------------------------
-Mean F1 Score: 0.8350
-Std F1 Score: 0.1116
-Best Class: Rattlesnake Plant (Calathea lancifolia) (F1: 0.9677)
-Worst Class: Yucca (F1: 0.3750)
+Mean F1 Score: 0.7715
+Std F1 Score: 0.1183
+Best Class: Iron Cross begonia (Begonia masoniana) (F1: 0.9512)
+Worst Class: Begonia (Begonia spp.) (F1: 0.4286)
 
 CLASS IMBALANCE ANALYSIS
 --------------------------------------------------------------------------------
@@ -36,27 +36,27 @@ Imbalance Ratio (Max/Min): 8.20
 MINORITY CLASSES (n=13):
   Support Range: 10 - 36
   Avg Support: 28.5
-  Avg Precision: 0.7609 (±0.1218)
-  Avg Recall: 0.8020 (±0.2079)
-  Avg F1: 0.7739 (±0.1574)
+  Avg Precision: 0.7498 (±0.1558)
+  Avg Recall: 0.7620 (±0.1912)
+  Avg F1: 0.7463 (±0.1570)
 
 MEDIUM CLASSES (n=22):
   Support Range: 37 - 54
   Avg Support: 47.2
-  Avg Precision: 0.8597 (±0.0982)
-  Avg Recall: 0.8433 (±0.1142)
-  Avg F1: 0.8477 (±0.0915)
+  Avg Precision: 0.7758 (±0.1304)
+  Avg Recall: 0.7823 (±0.1421)
+  Avg F1: 0.7718 (±0.1150)
 
 MAJORITY CLASSES (n=12):
   Support Range: 58 - 82
   Avg Support: 67.2
-  Avg Precision: 0.8866 (±0.0483)
-  Avg Recall: 0.8726 (±0.0702)
-  Avg F1: 0.8779 (±0.0479)
+  Avg Precision: 0.8218 (±0.0808)
+  Avg Recall: 0.7860 (±0.1018)
+  Avg F1: 0.7983 (±0.0693)
 
 CORRELATION (Support vs Performance):
-  Support vs Precision: +0.4526
-  Support vs Recall: +0.2620
-  Support vs F1: +0.4011
+  Support vs Precision: +0.2130
+  Support vs Recall: +0.0097
+  Support vs F1: +0.1246
 
 ================================================================================
